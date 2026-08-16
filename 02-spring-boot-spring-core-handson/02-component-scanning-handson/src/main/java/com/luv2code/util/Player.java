@@ -1,6 +1,6 @@
 package com.luv2code.util;
 
-public interface Coach {
+public interface Player {
 
     String getDailyWorkout();
 

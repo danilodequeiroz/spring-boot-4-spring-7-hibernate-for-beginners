@@ -1,22 +1,23 @@
 package com.luv2code.springcoredemo.rest;
 
 import com.luv2code.springcoredemo.common.Coach;
+import com.luv2code.util.Player;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class DemoController {
+public class PlayerController {
 
-    private Coach coach;
+    private Player player;
 
     @Autowired
-    public DemoController(Coach theCoach){
-        coach = theCoach;
+    public PlayerController(Player thePlayer){
+        player = thePlayer;
     }
 
-    @GetMapping("/dailyworkout")
+    @GetMapping("/player/dailyworkout")
     public  String getDailyWorkout(){
-        return coach.getDailyWorkout();
+        return player.getDailyWorkout();
     }
 }
