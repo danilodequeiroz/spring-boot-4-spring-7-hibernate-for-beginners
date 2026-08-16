@@ -1,0 +1,24 @@
+# Spring prioritizes application.properties over application.yml when they both exist
+#
+anagement:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        # exclude: health,info
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: My Super Cool App
+    description: A crazy fun app, yoohoo!
+    version: 1.0.0
+
+# Define properties
+coach:
+  name: Mickey Mouse
+
+team:
+  name: The Mouse Club
