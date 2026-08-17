@@ -4,8 +4,13 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
 public class TrackCoach implements Coach {
+
+    public TrackCoach() {
+        System.out.printf(
+                "%s constructor called%n", getClass().getSimpleName()
+        );
+    }
 
     @Override
     public String getDailyWorkout() {
