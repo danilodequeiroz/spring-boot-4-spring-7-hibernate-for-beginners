@@ -13,10 +13,10 @@ public class DemoController {
 
     @Autowired
     public  DemoController(
-        @Qualifier("cricketCoach")Coach theCoach
+        @Qualifier("swimCoach")Coach theCoach
     ) {
         System.out.printf(
-                "%s constructor called%n", getClass().getSimpleName()
+            "%s constructor called%n", getClass().getSimpleName()
         );
         this.coach = theCoach;
     }
