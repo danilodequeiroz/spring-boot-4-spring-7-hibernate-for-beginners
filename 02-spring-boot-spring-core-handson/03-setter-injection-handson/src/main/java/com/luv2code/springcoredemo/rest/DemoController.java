@@ -11,8 +11,8 @@ public class DemoController {
     private Coach coach;
 
     @Autowired
-    public DemoController(Coach theCoach){
-        coach = theCoach;
+    public void setCoach(Coach coach) {
+        this.coach = coach;
     }
 
     @GetMapping("/dailyworkout")
