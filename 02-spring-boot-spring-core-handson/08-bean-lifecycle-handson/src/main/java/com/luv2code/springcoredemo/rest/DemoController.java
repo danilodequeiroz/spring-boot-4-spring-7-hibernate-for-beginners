@@ -10,18 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
     private Coach coach;
-    private Coach anotherCoach;
 
     @Autowired
     public  DemoController(
-        @Qualifier("cricketCoach")Coach theCoach,
-        @Qualifier("cricketCoach")Coach theAnotherCoach
+        @Qualifier("cricketCoach")Coach theCoach
     ) {
         System.out.printf(
                 "%s constructor called%n", getClass().getSimpleName()
         );
         this.coach = theCoach;
-        this.anotherCoach = theAnotherCoach;
     }
 
     @GetMapping("/dailyworkout")
@@ -29,8 +26,4 @@ public class DemoController {
         return coach.getDailyWorkout();
     }
 
-    @GetMapping("/check")
-    public  String checkCoaches(){
-        return "Comparing beans: coach == anotherCoach, %s".formatted(coach == anotherCoach);
-    }
 }
